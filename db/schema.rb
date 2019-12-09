@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_12_09_151215) do
     t.bigint "story_id", null: false
     t.bigint "word_id", null: false
     t.integer "index"
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["story_id"], name: "index_story_words_on_story_id"

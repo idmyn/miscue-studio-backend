@@ -4,6 +4,7 @@ class CreateStoryWords < ActiveRecord::Migration[6.0]
       t.references :story, null: false, foreign_key: true
       t.references :word, null: false, foreign_key: true
       t.integer :index
+      t.string :content
 
       t.timestamps
     end
