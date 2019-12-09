@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :mistakes
+  resources :story_words
   resources :readings
   resources :words
   resources :stories
