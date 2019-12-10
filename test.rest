@@ -5,7 +5,7 @@ Content-Type: application/json
 
 {
   "teacher": {
-    "email": "p",
+    "email": "p@h.com",
     "password": "p",
     "password_confirmation": "p"
   }

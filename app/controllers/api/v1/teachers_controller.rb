@@ -7,7 +7,7 @@ class Api::V1::TeachersController < ApplicationController
   def create
     teacher = Teacher.create(teacher_params)
     if teacher.valid?
-      render json: teacher
+      render json: { teacher: TeacherSerializer.new(teacher), token: issue_token(teacher_id: teacher.id) }
     else
       render json: { errors: teacher.errors.full_messages }, status: :not_accepted
     end
