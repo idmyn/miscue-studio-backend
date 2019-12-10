@@ -1,5 +1,9 @@
 # https://github.com/pashky/restclient.el
 
+:token = eyJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyX2lkIjo2fQ.v9yc0bxSr8vjf7GalUUMtfx7cnybWEspoK_wIwWR7Pg
+
+# sign up (create teacher)
+
 POST http://localhost:3000/api/v1/teachers
 Content-Type: application/json
 
@@ -10,3 +14,21 @@ Content-Type: application/json
     "password_confirmation": "p"
   }
 }
+
+# login
+
+POST http://localhost:3000/api/v1/login
+Content-Type: application/json
+
+{
+  "teacher": {
+    "email": "p@h.com",
+    "password": "p"
+  }
+}
+
+# validate
+
+GET http://localhost:3000/api/v1/validate
+Content-Type: application/json
+Authorization: :token

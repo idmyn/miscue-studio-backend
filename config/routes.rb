@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       # resources :stories
       resources :students, only: [:index, :show]
       resources :teachers, only: [:create, :show]
+      post "/login", to: "teachers#login"
+      get "/validate", to: "teachers#validate"
     end
   end
 end
