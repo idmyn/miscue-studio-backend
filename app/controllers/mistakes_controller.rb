@@ -1,2 +1,0 @@
-class MistakesController < ApplicationController
-end

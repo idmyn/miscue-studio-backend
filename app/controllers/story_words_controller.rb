@@ -1,2 +1,0 @@
-class StoryWordsController < ApplicationController
-end
