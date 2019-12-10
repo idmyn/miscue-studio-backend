@@ -6,8 +6,8 @@ Rails.application.routes.draw do
       # resources :readings
       # resources :words
       # resources :stories
-      resources :students, only: [:index]
-      # resources :teachers
+      resources :students, only: [:index, :show]
+      resources :teachers, only: [:create, :show]
     end
   end
 end
