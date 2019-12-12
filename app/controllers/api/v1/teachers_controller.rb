@@ -18,7 +18,7 @@ class Api::V1::TeachersController < ApplicationController
     if teacher&.authenticate(login_params[:password])
       render json: { teacher: TeacherSerializer.new(teacher), token: issue_token(teacher_id: teacher.id) }
     else
-      render json: { errors: ["Email or password incorrect"] }
+      render json: { errors: ["Email or password incorrect."] }
     end
   end
 
