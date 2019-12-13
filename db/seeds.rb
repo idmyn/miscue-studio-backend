@@ -1,4 +1,4 @@
-krabappel = Teacher.create(email: "edna@example.com", password: "password")
+krabappel = Teacher.create(email: "edna@springfield.edu", password: "password")
 
 10.times do
   name = Faker::Name.unique.first_name + " " + Faker::Name.unique.last_name
