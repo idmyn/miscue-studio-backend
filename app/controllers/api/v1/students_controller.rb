@@ -1,6 +1,11 @@
 class Api::V1::StudentsController < ApplicationController
   def index
-    render json: Student.all
+    if logged_in
+      students = Student.where teacher_id: @current_teacher.id
+      render json: students
+    else
+      render json: { errors: ["Invalid token"] }, status: :not_accepted
+    end
   end
 
   def show
