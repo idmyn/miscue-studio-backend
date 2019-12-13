@@ -5,9 +5,9 @@ Rails.application.routes.draw do
       # resources :story_words
       # resources :readings
       # resources :words
-      # resources :stories
       resources :students, only: [:index, :show]
       resources :teachers, only: [:create, :show]
+      resources :stories, only: [:index, :show]
       post "/login", to: "teachers#login"
       get "/validate", to: "teachers#validate"
     end
