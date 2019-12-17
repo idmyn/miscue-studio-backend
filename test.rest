@@ -1,6 +1,6 @@
 # https://github.com/pashky/restclient.el
 
-:token = eyJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyX2lkIjo2fQ.v9yc0bxSr8vjf7GalUUMtfx7cnybWEspoK_wIwWR7Pg
+:token = eyJhbGciOiJIUzI1NiJ9.eyJ0ZWFjaGVyX2lkIjoxfQ.om35XTNV_AqVREcEUXCXq7BcVBjUZI6w_kS-SnG09BE
 
 # sign up (create teacher)
 
@@ -22,8 +22,8 @@ Content-Type: application/json
 
 {
   "teacher": {
-    "email": "p@h.com",
-    "password": "p"
+    "email": "edna@springfield.edu",
+    "password": "password"
   }
 }
 
@@ -42,3 +42,28 @@ Content-Type: application/json
 
 GET http://localhost:3000/api/v1/stories/1
 Content-Type: application/json
+
+# post reading
+
+POST http://localhost:3000/api/v1/readings
+Content-Type: application/json
+Authorization: :token
+
+{
+"reading": {
+    "student_id": "5",
+    "story_id": 1,
+    "mistakes": [
+        {
+            "storyWordId": 10,
+            "category": "Miscorrection",
+            "miscue": "asdf"
+        },
+        {
+            "storyWordId": 49,
+            "category": "Hesitation",
+            "miscue": null
+        }
+    ]
+}
+}
