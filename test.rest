@@ -67,3 +67,9 @@ Authorization: :token
     ]
 }
 }
+
+# index readings
+
+GET http://localhost:3000/api/v1/readings
+Content-Type: application/json
+Authorization: :token
