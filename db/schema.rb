@@ -10,17 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_151215) do
+ActiveRecord::Schema.define(version: 2019_12_17_105434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "mistakes", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.bigint "reading_id", null: false
     t.bigint "story_word_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "miscue"
     t.index ["reading_id"], name: "index_mistakes_on_reading_id"
     t.index ["story_word_id"], name: "index_mistakes_on_story_word_id"
   end
