@@ -49,7 +49,7 @@ module MiscueStudioBackend
     end
 
     Rails.application.configure do
-      config.hosts << "miscue-studio.dp9zaspqxh.us-west-2.elasticbeanstalk.com"
+      config.hosts << "miscue-studio.pdfhwxygmg.eu-west-2.elasticbeanstalk.com"
     end
   end
 end
