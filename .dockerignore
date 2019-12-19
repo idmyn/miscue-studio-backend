@@ -1,2 +1,5 @@
 .git
 config/local_env.yml
+
+tmp
+log/*
