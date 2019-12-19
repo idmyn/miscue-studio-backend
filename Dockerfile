@@ -1,9 +1,10 @@
-FROM ruby:2.6
+FROM ruby:2.6.5-alpine
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        postgresql-client \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    build-base \
+    linux-headers \
+    tzdata \
+    postgresql-dev
 
 WORKDIR /usr/src/app
 COPY Gemfile* ./
