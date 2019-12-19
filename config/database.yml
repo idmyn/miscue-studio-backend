@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: miscue_studio_backend_production
-  username: miscue_studio_backend
-  password: <%= ENV['MISCUE_STUDIO_BACKEND_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

@@ -47,5 +47,9 @@ module MiscueStudioBackend
         ENV[key.to_s] = value
       end if File.exist?(env_file)
     end
+
+    Rails.application.configure do
+      config.hosts << "miscue-studio.dp9zaspqxh.us-west-2.elasticbeanstalk.com"
+    end
   end
 end

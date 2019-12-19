@@ -3,3 +3,7 @@ config/local_env.yml
 
 tmp
 log/*
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
