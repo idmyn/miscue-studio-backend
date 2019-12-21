@@ -1,1 +1,1 @@
-config/local_env.yml filter=git-crypt diff=git-crypt
+config/application.yml filter=git-crypt diff=git-crypt
