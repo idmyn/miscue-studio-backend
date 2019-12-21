@@ -43,6 +43,7 @@ module MiscueStudioBackend
 
     Rails.application.configure do
       config.hosts << "api.miscue.studio"
+      config.hosts << "miscue-studio.herokuapp.com"
       config.hosts << "localhost"
     end
   end
