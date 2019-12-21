@@ -1,4 +1,4 @@
-class Api::V1::ReadingsController < ApplicationController
+class V1::ReadingsController < ApplicationController
   def index
     if logged_in
       readings = Reading.where teacher_id: @current_teacher.id

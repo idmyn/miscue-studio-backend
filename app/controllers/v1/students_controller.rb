@@ -1,4 +1,4 @@
-class Api::V1::StudentsController < ApplicationController
+class V1::StudentsController < ApplicationController
   def index
     if logged_in
       students = Student.where teacher_id: @current_teacher.id
