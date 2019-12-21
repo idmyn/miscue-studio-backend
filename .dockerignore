@@ -1,6 +1,0 @@
-.git
-.gitignore
-config/local_env.yml
-
-tmp
-log/*

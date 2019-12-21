@@ -42,7 +42,7 @@ module MiscueStudioBackend
     end
 
     Rails.application.configure do
-      config.hosts << "miscue-studio.uksouth.azurecontainer.io"
+      config.hosts << "api.miscue.studio"
     end
   end
 end
