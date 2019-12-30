@@ -4,7 +4,7 @@
 
 # sign up (create teacher)
 
-POST http://localhost:3000/api/v1/teachers
+POST http://localhost:3000/v1/teachers
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 # login
 
-POST http://localhost:3000/api/v1/login
+POST http://localhost:3000/v1/login
 Content-Type: application/json
 
 {
@@ -29,23 +29,23 @@ Content-Type: application/json
 
 # validate
 
-GET http://localhost:3000/api/v1/validate
+GET http://localhost:3000/v1/validate
 Content-Type: application/json
 Authorization: :token
 
 # index stories
 
-GET http://localhost:3000/api/v1/stories
+GET http://localhost:3000/v1/stories
 Content-Type: application/json
 
 # show story
 
-GET http://localhost:3000/api/v1/stories/1
+GET http://localhost:3000/v1/stories/1
 Content-Type: application/json
 
 # post reading
 
-POST http://localhost:3000/api/v1/readings
+POST http://localhost:3000/v1/readings
 Content-Type: application/json
 Authorization: :token
 
@@ -70,6 +70,17 @@ Authorization: :token
 
 # index readings
 
-GET http://localhost:3000/api/v1/readings
+GET http://localhost:3000/v1/readings
 Content-Type: application/json
 Authorization: :token
+
+# create student
+POST http://localhost:3000/v1/students
+Content-Type: application/json
+Authorization: :token
+
+{
+    "student": {
+        "name": "New Bloggs"
+    }
+}

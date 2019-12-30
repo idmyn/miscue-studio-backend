@@ -4,4 +4,6 @@ class Student < ApplicationRecord
   has_many :stories, through: :readings
   # has_many :words, through: :readings
   # has_many :mistakes, through: :readings
+
+  validates :name, uniqueness: true
 end

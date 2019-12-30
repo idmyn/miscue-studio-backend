@@ -3,7 +3,7 @@ Rails.application.routes.draw do
       # resources :mistakes
       # resources :story_words
       # resources :words
-      resources :students, only: [:index, :show]
+      resources :students, only: [:create, :index, :show]
       resources :teachers, only: [:create, :show]
       resources :stories, only: [:index, :show]
       resources :readings, only: [:index, :show, :create]
