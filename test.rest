@@ -84,3 +84,9 @@ Authorization: :token
         "name": "New Bloggs"
     }
 }
+
+# show student
+
+GET http://localhost:3000/v1/students/3
+Content-Type: application/json
+Authorization: :token

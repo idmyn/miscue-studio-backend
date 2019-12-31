@@ -10,7 +10,29 @@ class V1::StudentsController < ApplicationController
 
   def show
     student = Student.find(params[:id])
-    render json: student
+
+    readings = student.readings.map do |reading|
+      {
+        id: reading.id,
+        date: reading.date,
+        story: {
+          id: reading.story.id,
+          title: reading.story.title,
+          author: reading.story.author
+        }
+      }
+    end
+
+    words = student.words.uniq.map do |word|
+      { id: word.id, content: word.content }
+    end
+
+    render json: {
+      id: student.id,
+      name: student.name,
+      readings: readings,
+      words: words
+    }
   end
 
   def create
