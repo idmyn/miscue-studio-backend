@@ -1,24 +1,11 @@
-# README
+# Miscue Studio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Miscue analysis](https://en.wikipedia.org/wiki/Miscue_analysis) is a diagnostic
+tool to help teachers better understand the reading ability of their
+students. This webapp enables teachers to digitally annotate reading material
+with a representation of the way it was actually read by a student. The webapp
+can then use these annotations to generate statistics about the student’s
+reading ability, and track their progress over time. Work in progress.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+React frontend can be found
+[here](https://github.com/idmyn/miscue-studio-frontend).
