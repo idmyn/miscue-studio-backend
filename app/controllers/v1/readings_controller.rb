@@ -13,7 +13,8 @@ class V1::ReadingsController < ApplicationController
       reading = Reading.create({
         teacher_id: @current_teacher.id,
         student_id: reading_params["student_id"],
-        story_id: reading_params["story_id"]
+        story_id: reading_params["story_id"],
+        date: reading_params["date"]
       })
 
       if reading.valid?
@@ -38,6 +39,6 @@ class V1::ReadingsController < ApplicationController
   private
 
   def reading_params
-    params.require(:reading).permit(:student_id, :story_id, mistakes: [:storyWordId, :category, :miscue])
+    params.require(:reading).permit(:student_id, :story_id, :date, mistakes: [:storyWordId, :category, :miscue])
   end
 end
