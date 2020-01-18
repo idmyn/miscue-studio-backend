@@ -54,3 +54,10 @@ teacher hash. If unsuccessful, a response is sent with a status of
 `:not_accepted`
 ([406?](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406)) and the
 following error hash: `{ errors: ["Invalid token"] }`.
+
+#### Issues
+
+The account creation and login endpoints don't currently send appropriate error
+codes with their responses when auth was unsuccessful. This is because it was
+causing trouble in the frontend (probably because I was doing it wrong in the
+backend). Low severity, but worth fixing at some point.
